@@ -18,8 +18,7 @@ export function typecheck(t: Term): Type {
     case "false":
       return { tag: "Boolean" };
     case "if": {
-      const condTy = typecheck(t.cond);
-      if (condTy.tag !== "Boolean") error("boolean expected", t.cond);
+      typecheck(t.cond);
       const thnTy = typecheck(t.thn);
       const elsTy = typecheck(t.els);
       if (thnTy.tag !== elsTy.tag) error("then and else have different types", t);
