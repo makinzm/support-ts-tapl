@@ -1,5 +1,5 @@
 import { parse, parseObj } from "npm:tiny-ts-parser";
-import { typecheck } from "npm:typecheckers/obj";
+import { typecheck } from "./typecheckers/obj.ts";
 
 const node = parseObj("({a: 10, a: 'string'})")
 
@@ -13,3 +13,4 @@ f(x);
 `
 
 console.log(typecheck(parse(edgeCase)));
+
