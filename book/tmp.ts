@@ -7,8 +7,8 @@ console.log(node);
 
 const edgeCase = `
 const f = (x: {a : number, a: boolean}) => 2;
-const x = {x: 1, x: true};
-const y = {x: true, x: 1};
+const x = {a: 1, a: true};
+const y = {a: true, a: 1};
 f(x);
 `
 
