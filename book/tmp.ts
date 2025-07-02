@@ -6,8 +6,8 @@ const node = parseObj("({a: 10, a: 'string'})")
 console.log(node);
 
 const edgeCase = `
-const f = (x: {a : number, a: boolean}) => 2;
-const x = {a: 1, a: true};
+const f = (x: {a : number, a: number}) => 2;
+const x = {a: 1, a: 1};
 const y = {a: true, a: 1};
 f(x);
 `
